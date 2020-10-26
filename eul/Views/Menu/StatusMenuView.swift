@@ -10,7 +10,11 @@ import SwiftUI
 
 struct StatusMenuView: SizeChangeView {
     @EnvironmentObject var preferenceStore: PreferenceStore
+<<<<<<< HEAD
     @EnvironmentObject var batteryStore: BatteryStore
+=======
+    @EnvironmentObject var menuComponentsStore: ComponentsStore<EulMenuComponent>
+>>>>>>> d17a57ef437e3a0a34d49d33f057555093bc682d
 
     func openPreferences() {
         (NSApp.delegate as! AppDelegate).window.makeKeyAndOrderFront(nil)
@@ -34,6 +38,7 @@ struct StatusMenuView: SizeChangeView {
                 MenuActionTextView(id: "menu.preferences", text: "menu.preferences", action: openPreferences)
                 MenuActionTextView(id: "menu.quit", text: "menu.quit", action: quit)
             }
+<<<<<<< HEAD
             CpuMenuBlockView()
             FanMenuBlockView()
             MemoryMenuBlockView()
@@ -41,6 +46,11 @@ struct StatusMenuView: SizeChangeView {
                 BatteryMenuBlockView()
             }
             NetworkMenuBlockMenuView()
+=======
+            ForEach(menuComponentsStore.activeComponents) {
+                $0.getView()
+            }
+>>>>>>> d17a57ef437e3a0a34d49d33f057555093bc682d
         }
         .padding(.vertical, 8)
         .padding(.horizontal, 15)

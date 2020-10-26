@@ -28,10 +28,20 @@ macOS 10.15 minimum for SwiftUI support
 
 # Installation
 
+### Download
+
 Download the [latest release](https://github.com/gao-sun/eul/releases/latest/download/eul.app.zip) directly and drag `.app` file into your `Application` folder.
 
-Or [click here](https://github.com/gao-sun/eul/releases/latest) to browse our latest release note.
+### Homebrew Cask
 
-# Preferences
+```bash
+brew cask install eul
+```
 
-<img src="https://user-images.githubusercontent.com/14722250/96442576-ee955080-123d-11eb-8247-f09bb3e91492.png" width="500" />
+### App Store
+
+Search `eul` or [click here](https://apps.apple.com/us/app/eul/id1537133867) to view in App Store. Some features are disabled since the removal of all SMC calls.
+
+### Release Notes
+
+[Click here](https://github.com/gao-sun/eul/releases/latest) to browse our latest release notes.
